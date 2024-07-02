@@ -5,7 +5,7 @@ const Keyboard = ({ heroMove, replay }) => {
     return (
         <div className={styles.keyboard}>
             <div className={styles.firstLetter}>
-                <button onClick={() => replay()}>Заного</button>
+                <button onClick={() => replay()}>Заново</button>
                 <button onClick={() => heroMove('up')}>🔼</button>
                 <button>#</button>
             </div>
