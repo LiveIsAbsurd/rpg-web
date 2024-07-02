@@ -17,10 +17,10 @@ function carve(x, y, map, size) {
         let nx = x + dx*2;
         let ny = y + dy * 2;
 
-        if (nx >= 0 && nx < size[1] && ny >= 0 && ny < size[0] && map[ny][nx] === '⬛️') {
+        if (nx >= 0 && nx < size[1] && ny >= 0 && ny < size[0] && map[ny][nx] === 'wall') {
             if (y + dy !== size[0] && x + dx !== size[1] && ny !== size[0] && nx !== size[1]) {
-                map[y+dy][x+dx] = '⬜️';
-                map[ny][nx] = '⬜️';
+                map[y+dy][x+dx] = 'floor';
+                map[ny][nx] = 'floor';
             }
             carve(nx, ny, map, size);
         }

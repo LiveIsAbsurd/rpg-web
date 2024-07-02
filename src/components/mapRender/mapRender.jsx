@@ -1,14 +1,13 @@
 import React from "react";
 import styles from './mapRender.module.sass';
-import mapToText from "../../functions/mapToText";
+import renderingMap from "../../functions/renderingMap";
 
 const MapRender = ({ map, hero, mapSize }) => {
     const { position, visible } = hero;
-    
-    
+
     return (
         <div className={styles.main}>
-            {mapToText(map, position, visible)}
+            {renderingMap(map, position, visible, styles)}
         </div>
     )
 }
