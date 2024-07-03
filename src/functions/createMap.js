@@ -16,6 +16,13 @@ const createMap = (heroPosition, size = [20, 20]) => {
 
     carve(1, 1, newMap, size);
 
+    for (let i = 1; i < size[0]; i++) {
+        if ((Math.random() * 100 + 1) > 70) {
+            newMap[i][i] = 'floor';
+        }
+    }
+    console.log(newMap)
+
     newMap[heroPosition[0]][heroPosition[1]] = 'hero';
     // const boxPosition = [(Math.random() * size[0] + 1).toFixed(0), (Math.random() * size[1] + 1).toFixed(0)];
     // newMap[boxPosition[0]][boxPosition[1]] = '⚰';

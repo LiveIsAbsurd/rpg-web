@@ -6,13 +6,13 @@ import { useState, useEffect } from 'react';
 import createMap from '../../functions/createMap';
 
 const startHero = [1, 1]
-const mapSize = [151, 151]
+const mapSize = [21, 21]
 
 function App() {
   const [map, setMap] = useState([]);
   const [HeroInfo, setHeroInfo] = useState({
     position: [...startHero],
-    visible: 3,
+    visible: 20,
     step: 0
   });
 
